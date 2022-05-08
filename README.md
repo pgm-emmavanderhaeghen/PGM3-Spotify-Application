@@ -114,9 +114,6 @@ Should you encounter any issues or questions, you can contact me on emmavand24@s
 ## Author
 This project was made by yours truly, <br> Emma Van der Haeghen <3
 
-## Postscript
-Finally, I would like to say that I am aware that this application is of low quality. I am deeply disappointed in myself, but despite all the mental breakdowns and panic attacks, I could not bring myself to do better. I slept very badly for a whole week and am very unhappy with my work. I just wanted to let you know that I did my best throughout the whole Easter period, but the end result is deeply disappointing. I would like to apologise for this. 
-
 
 ## License
 MIT License
