@@ -1,0 +1,192 @@
+/* Import reset CSS */
+@import url("reset.css");
+
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --green: #1DB954;
+  --dark-green: #1ba84c;
+
+  --dark-grey: #181818;
+  --dark-light-grey: #2A2A2A;
+  --light-grey: #B3B3B3;
+  --grey: #535353;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--white);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+small, .text-small { font-size: 0.8rem; }
+
+#content {
+  padding: 30px;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  transition: opacity .3s;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 7px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input.btn-primary {
+  font-weight: 600;
+  padding: .7rem;
+}
+
+.btn-primary {
+  border: 1px solid var(--green);
+  background-color: var(--green);
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  border: 1px solid var(--dark-green);
+  background-color: var(--dark-green);
+  border-radius: 5px;
+}
+
+.btn-tertiary {
+  color: var(--light-grey);
+}
+
+.btn-tertiary:hover {
+  color: var(--dark-green);
+}
+
+/* Authentication Container */
+
+.auth-container {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 32px;
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+
+.auth-container h4 {
+  margin: 0 0 20px 0;
+}
+
+.auth-container form {
+  width: 100%;
+}
+
+.auth-container form .input-container + .input-container {
+  margin-top: 10px;
+}
+
+.auth-container form .input-container label {
+  display: block;
+}
+
+.auth-container form .input-container .error {
+  color: var(--color-dark-red);
+  font-size: 0.8rem;
+}
+
+.auth-container form .input-container input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.auth-container .footer-container {
+  display: flex;
+  margin-top: 40px;
+  justify-content: flex-end;
+}
+
+.auth-container .footer-container .btn + .btn {
+  margin-left: 10px;
+}
+
+ul.form-errors {
+  padding: 7px 0 7px 10px;
+  background-color: lightcoral;
+  color: white;
+  margin-bottom: 20px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.left-link {
+  color: var(--color-bright-purple);
+  margin-right: 2.8rem;
+  font-size: 0.9rem;
+  text-emphasis: none;
+}
+
+.left-link a {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+div.input-container, select#roles{
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  margin: 0 auto;
+}
+
+.input-field, select#roles{
+  margin-top: .2rem;
+  margin-bottom: .6rem;
+  background-color: var(--dark-light-grey);
+  border: 1px solid var(--dark-light-grey);
+  color: var(--white);
+  padding: .8rem;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+img {
+  width: 10rem;
+  height: 3rem;
+}

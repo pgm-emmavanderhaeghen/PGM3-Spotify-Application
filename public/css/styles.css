@@ -1,0 +1,518 @@
+/* import other CSS */
+@import url('reset.css');
+
+:root {
+  --black: #000000;
+  --black-o: #000000ab;
+  --white: #FFFFFF;
+  --green: #1DB954;
+  --dark-green: #11843A;
+
+  --dark-grey: #181818;
+  --light-grey: #B3B3B3;
+  --grey: #535353;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--black);
+  color: var(--light-grey);
+  overflow-y: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+}
+
+aside.playlists,
+aside.artists {
+  width: 20%;
+  padding: 1rem;
+}
+
+.sidebar__content {
+  margin-top: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(98.5vh - 11rem);
+}
+
+.content {
+  width: 60%;
+  padding: 1rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: .5rem;
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--light-grey);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+  cursor: pointer;
+} 
+
+/* left sidebar = playlists */
+.playlist, .artist {
+  padding: 1rem;
+  transition: .3s;
+  color: var(--white);
+}
+
+.playlist.active, .artist.active {
+  border-left: 4px solid var(--green);
+  color: var(--green);
+  font-weight: 600;
+}
+
+.playlist:hover, .artist:hover {
+  border-left: 4px solid var(--green);
+  color: var(--green);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.create__input {
+  background-color: var(--dark-grey);
+  border: none;
+  padding: .6rem;
+  width: calc(100% - 4rem);
+  color: var(--white);
+}
+
+.update__input {
+  background-color: var(--dark-grey);
+  border: none;
+  padding: .6rem;
+  width: 100%;
+  color: var(--white);
+  margin-top: .5rem;
+}
+
+/* bottom bar = song */
+.song-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  background-color: var(--dark-grey);
+  color: var(--white);
+  padding: 1rem;
+}
+
+.song-btn {
+  margin: 0 .5rem;
+
+}
+
+#Ellipse_1:hover {
+  fill: var(--green);
+}
+
+svg.song-btn:hover {
+  fill: white;
+  cursor: pointer;
+}
+
+.playlist-cover, .album-cover {
+  width: 14rem;
+}
+
+.playlist-cover-small {
+  width: 3rem;
+  height: 3rem;
+}
+
+.playlist-info, .album-info {
+  padding: 1rem 2rem;
+  position: relative;
+  bottom: -4rem;
+}
+
+.small-title {
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: .6rem;
+}
+
+.song-info {
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+  line-height: 1.2;
+  transition: .3s;
+}
+
+.song-info:hover {
+  padding-left: .5rem;
+  color: var(--green);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.song-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.song-description {
+  color: var(--grey);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: .6rem;
+}
+
+.description {
+  color: var(--grey);
+}
+.header {
+  display: flex;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  justify-content: space-between;
+}
+
+.main-header {
+  padding: 2rem;
+  display: flex;
+}
+
+.header {
+  background-color: var(--dark-grey);
+  color: var(--white);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(74vh - 16.5rem);
+}
+
+.song--current {
+  padding: 0;
+}
+
+.active-song {
+  display: flex;
+}
+
+.btn {
+  height: 1.5rem;
+  width: 1.5rem;
+  border: none;
+  background-color: transparent;
+}
+
+.delete, .update {
+  fill: var(--grey);
+}
+
+.delete:hover, .update:hover {
+  fill: var(--light-grey);
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.create-new {
+  margin: 1rem 0rem;
+  display: flex;
+  gap: .5rem;
+}
+
+.new-btn {
+  background-color: var(--green);
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.new {
+  margin: .2rem;
+  fill: var(--white);
+}
+
+.new-btn:hover {
+  background-color: var(--dark-green);
+  cursor: pointer;
+}
+
+
+.song {
+  width: 16rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.song-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  border-bottom: 2px solid var(--dark-grey);
+  padding: 2rem;
+}
+
+.song-list:hover {
+background-color: #181818;
+}
+
+.grid {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(74vh - 17rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.album-card {
+  padding: 2rem;
+  min-width: 14rem;
+  background-color: var(--dark-grey);
+}
+
+.album-cover-small {
+  width: 11.5rem;
+  height: 11.5rem;
+  margin-bottom: 1rem;
+}
+
+.btm-spacer {
+  margin-bottom: 2rem;
+}
+
+.link {
+  color: var(--white);
+}
+
+.album-title:hover {
+  color: var(--green);
+  cursor: pointer;
+}
+
+.link-container {
+  position: relative;
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  height: 10%;
+  width: 10%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.link-container:hover .overlay {
+  opacity: 1;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  gap: 1rem;
+  height: 3rem;
+  padding: .5rem 1.5rem .5rem 1rem;
+  border-radius: 2rem;
+  align-items: center;
+  background-color: var(--black);
+}
+
+.profile:hover {
+  background-color: var(--green);
+}
+
+.profile-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+}
+
+/* Switch */
+
+#theme-switcher.switch {
+  margin-top: 1rem;
+  position: relative;
+  right: -6.6rem;
+}
+
+.switch {
+  cursor: pointer;
+  background-color: var(--black);
+  width: 3.8rem;
+  height: 2.2rem;
+  border-radius: 2rem;
+  margin-left: 0.5rem;
+  border: 2px solid var(--light-grey);
+}
+
+.switch__circle {
+  transition: all ease 0.5s;
+  margin: 0.15rem;
+  max-width: 2.2rem;
+  width: 100%;
+  height: 1.6rem;
+  border-radius: 2rem;
+  background-color: var(--green);
+  z-index: 5;
+}
+
+.btn-logout {
+  color: rgb(220, 0, 0);
+  font-size: 1rem;
+  font-weight: 600;
+  width: 6rem;
+  border: 2px solid var(--dark-grey);
+  border-radius: 4rem;
+  background-color: var(--dark-grey);
+}
+
+.btn-logout:hover {
+  cursor: pointer;
+  color: var(--white);
+  background-color: rgb(220, 0, 0);
+}
+
+.btn-group {
+  display: flex;
+}
+
+.btn__green {
+  background-color: var(--green);
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 2rem;
+}
+
+
+
+
+
+.modal { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--black-o);
+  cursor: pointer;
+  visibility: hidden;
+  transition: all 0.35s ease-in;
+}
+
+.modal-dialog {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  background: var(--white);
+  overflow: auto;
+  cursor: default;
+}
+
+.modal-dialog > * {
+  padding: 1rem;
+}
+ 
+.modal-header,
+.modal-footer {
+  background: var(--lightgray);
+}
+ 
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.modal-header .modal-close {
+  font-size: 1.5rem;
+}
+ 
+.modal p + p {
+  margin-top: 1rem;
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+ 
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+}
+
+.play-music {
+  background: transparent;
+  border: none;
+}

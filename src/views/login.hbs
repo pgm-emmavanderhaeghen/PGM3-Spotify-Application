@@ -1,0 +1,19 @@
+{{!-- Login --}}
+
+<section class="auth-container login">
+    <div class="header">
+        <img class="logo" src="/images/spotify_logo_PNG1.png" alt="Spotify-logo">
+        <h3>Log in</h3>
+        {{>form-errors this}}
+    </div>
+    <form method="post" action="login">
+        {{#each inputs}}
+            {{>form-input this}}
+        {{/each}}
+        <div class="footer-container">
+            <span class="left-link">Don't have an account yet? <br> <a href="/register">Register</a></span>
+            <input type="reset" class="btn btn-tertiary" value="Clear">
+            <input type="submit" class="btn btn-primary" value="Login">
+        </div>
+    </form>
+</section>
